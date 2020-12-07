@@ -32,7 +32,7 @@ namespace NETD_F2020_Lab5.Models
         public Nature Nature { get; set; }
 
         // Navigation Property
-        public virtual Stats Statistics { get; set; }
+        public virtual Stats? Statistics { get; set; }
 
     }
 }
