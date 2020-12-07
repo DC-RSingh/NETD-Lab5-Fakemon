@@ -13,7 +13,7 @@ namespace NETD_F2020_Lab5.Models
     {
         // The ID of the Fake Monster
         [Key]
-        public int DexNumber { get; set; }
+        public Guid DexNumber { get; set; }
 
         // The Name of the Fake Monster
         public string Name { get; set; }
@@ -22,10 +22,13 @@ namespace NETD_F2020_Lab5.Models
         public Type TypeOne { get; set; }
 
         // The Secondary Type of the Fake Monster
-        public Type? TypeTwo { get; set; } 
+        public Type? TypeTwo { get; set; }
 
-        // Statistical Data of the Fake Monster
-        public Stats Statistics { get; set; }
+        // The Nature of the Fake Monster
+        public Nature Nature { get; set; }
+
+        // Navigation Property
+        public virtual Stats Statistics { get; set; }
 
     }
 }

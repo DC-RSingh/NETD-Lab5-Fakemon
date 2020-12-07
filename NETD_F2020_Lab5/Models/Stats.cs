@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
@@ -8,6 +10,8 @@ namespace NETD_F2020_Lab5.Models
 {
     public class Stats
     {
+        [ForeignKey("Fakemon")]
+        public Guid StatsId { get; set; }
 
         public int HitPoints { get; set; } // The Health Stat
 
@@ -23,8 +27,7 @@ namespace NETD_F2020_Lab5.Models
 
         public int Total => HitPoints + Attack + Defense + SpecialAttack + SpecialDefense + Speed; // The Total of Every Stat
 
-        // The Nature of the Fake Monster
-        // Increases and Decreases a stat depending on the nature
-        public Nature Nature { get; set; }
+        // Navigation Property
+        public virtual Fakemon Fakemon { get; set; }
     }
 }
