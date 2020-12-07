@@ -2,7 +2,6 @@
 {
     public enum Type
     {
-        None,
         Normal,
         Fighting,
         Flying,
