@@ -35,6 +35,12 @@ namespace NETD_F2020_Lab5
             services.AddControllersWithViews();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddMvc(options => options.EnableEndpointRouting = false);
+
+            // Add the database connection
+            var connection = @"Server=(localdb)\mssqllocaldb;Database=NETD_F2020_Lab5;Trusted_Connection=True;ConnectRetryCount=0";
+
+            // Add DB Context
+            services.AddDbContext<FakedexContext>(options => options.UseSqlServer(connection));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
