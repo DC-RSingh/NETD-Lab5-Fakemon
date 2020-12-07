@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace NETD_F2020_Lab5.Models
 {
-    public class StatValue
+    public abstract class StatValue
     {
         public int HitPoints { get; set; } // The Health Stat
 
@@ -19,6 +19,7 @@ namespace NETD_F2020_Lab5.Models
 
         public int Speed { get; set; } // The Speed Stat
 
-        public int Total { get; set; } // The Total of Every Stat
+        public int Total => HitPoints + Attack + Defense + SpecialAttack + SpecialDefense + Speed; // The Total of Every Stat
+
     }
 }
