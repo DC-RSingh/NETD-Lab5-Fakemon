@@ -5,7 +5,8 @@ using System.Threading.Tasks;
 
 namespace NETD_F2020_Lab5.Models
 {
-    public class EffortValue
+    public class EffortValue : StatValue
     {
+       
     }
 }
