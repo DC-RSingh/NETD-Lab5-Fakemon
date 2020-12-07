@@ -25,7 +25,7 @@ namespace NETD_F2020_Lab5.Models
 
         public int Speed { get; set; } // The Speed Stat
 
-        public int Total => HitPoints + Attack + Defense + SpecialAttack + SpecialDefense + Speed; // The Total of Every Stat
+        //public int Total => HitPoints + Attack + Defense + SpecialAttack + SpecialDefense + Speed; // The Total of Every Stat
 
         // Navigation Property
         public virtual Fakemon Fakemon { get; set; }
