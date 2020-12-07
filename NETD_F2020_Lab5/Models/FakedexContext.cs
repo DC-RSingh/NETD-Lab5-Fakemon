@@ -18,8 +18,6 @@ namespace NETD_F2020_Lab5.Models
 
         public DbSet<Fakemon> Fakemons { get; set; }
 
-        public DbSet<Stats> FakemonStats { get; set; }
-
         // To add database:
         // Add-Migration InitialCreate -- In Tools->Nuget Packet Manager->Packet Manager Console
         // Once the folder exists
