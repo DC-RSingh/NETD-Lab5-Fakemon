@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
@@ -19,12 +20,15 @@ namespace NETD_F2020_Lab5.Models
         public string Name { get; set; }
 
         // The Primary Type of the Fake Monster
+        [Column(TypeName = "nvarchar(40)")]
         public Type TypeOne { get; set; }
 
         // The Secondary Type of the Fake Monster
+        [Column(TypeName = "nvarchar(40)")]
         public Type? TypeTwo { get; set; }
 
         // The Nature of the Fake Monster
+        [Column(TypeName = "nvarchar(40)")]
         public Nature Nature { get; set; }
 
         // Navigation Property
