@@ -6,20 +6,22 @@ using Microsoft.AspNetCore.Identity;
 
 namespace NETD_F2020_Lab5.Models
 {
-    public class Stats : StatValue
+    public class Stats
     {
 
-        // The Level of the Fake Monster
-        // Used in calculating its Statistics
-        public int Level { get; set; }
+        public int HitPoints { get; set; } // The Health Stat
 
-        // The Effort Values of the Fake Monster
-        // Used in calculating its Statistics 
-        public EffortValue EffortValues { get; set; }
+        public int Attack { get; set; }  // The Attack Stat
 
-        // The Individual Values of the Fake Monster
-        // Used in Calculating its Statistics
-        public IndividualValue IndividualValues { get; set; }
+        public int Defense { get; set; } // The Defense Stat
+
+        public int SpecialAttack { get; set; } // The Special Attack (Magical Attack) Stat
+
+        public int SpecialDefense { get; set; } // The Special Defense (Magical Defense) Stat
+
+        public int Speed { get; set; } // The Speed Stat
+
+        public int Total => HitPoints + Attack + Defense + SpecialAttack + SpecialDefense + Speed; // The Total of Every Stat
 
         // The Nature of the Fake Monster
         // Increases and Decreases a stat depending on the nature
