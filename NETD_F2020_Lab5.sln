@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30503.244
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NETD_F2020_Lab5", "NETD_F2020_Lab5\NETD_F2020_Lab5.csproj", "{44759072-01B6-40EF-A0D4-7D0BD3555C83}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{44759072-01B6-40EF-A0D4-7D0BD3555C83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44759072-01B6-40EF-A0D4-7D0BD3555C83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44759072-01B6-40EF-A0D4-7D0BD3555C83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44759072-01B6-40EF-A0D4-7D0BD3555C83}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B95C452C-60F3-4A44-ADA6-D5028E52FC8D}
+	EndGlobalSection
+EndGlobal
