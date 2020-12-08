@@ -58,7 +58,7 @@ namespace NETD_F2020_Lab5.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("StatsId,HitPoints,Attack,Defense,SpecialAttack,SpecialDefense,Speed")] Stats stats)
         {
-            if (ModelState.IsValid)
+            if (ModelState.IsValid && !StatsExists(stats.StatsId))
             {
                 //stats.StatsId = Guid.NewGuid();
                 _context.Add(stats);
