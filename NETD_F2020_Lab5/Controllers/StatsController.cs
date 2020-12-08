@@ -66,6 +66,7 @@ namespace NETD_F2020_Lab5.Controllers
                 return RedirectToAction(nameof(Index));
             }
             ViewData["StatsId"] = new SelectList(_context.Fakemons, "DexNumber", "Name", stats.StatsId);
+
             return View(stats);
         }
 
@@ -82,6 +83,11 @@ namespace NETD_F2020_Lab5.Controllers
             {
                 return NotFound();
             }
+
+            // Retrieve corresponding Fakemon information
+            var fakemon = await _context.Fakemons.FindAsync(id);
+            stats.Fakemon = fakemon;
+
             ViewData["StatsId"] = new SelectList(_context.Fakemons, "DexNumber", "Name", stats.StatsId);
             return View(stats);
         }
