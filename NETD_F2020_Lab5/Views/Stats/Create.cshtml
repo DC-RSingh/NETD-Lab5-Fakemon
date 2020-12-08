@@ -10,6 +10,10 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
+        @if (ViewBag.Flag != null)
+        {
+            <div class="alert alert-danger">The Fakemon you are trying to enter stats for already has stats assigned! Try editing instead!</div>
+        }
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
@@ -21,36 +25,36 @@
             </div>
             <div class="form-group">
                 <label asp-for="HitPoints" class="control-label"></label>
-                <input asp-for="HitPoints" class="form-control" />
+                <input asp-for="HitPoints" class="form-control"/>
                 <span asp-validation-for="HitPoints" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Attack" class="control-label"></label>
-                <input asp-for="Attack" class="form-control" />
+                <input asp-for="Attack" class="form-control"/>
                 <span asp-validation-for="Attack" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Defense" class="control-label"></label>
-                <input asp-for="Defense" class="form-control" />
+                <input asp-for="Defense" class="form-control"/>
                 <span asp-validation-for="Defense" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="SpecialAttack" class="control-label"></label>
-                <input asp-for="SpecialAttack" class="form-control" />
+                <input asp-for="SpecialAttack" class="form-control"/>
                 <span asp-validation-for="SpecialAttack" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="SpecialDefense" class="control-label"></label>
-                <input asp-for="SpecialDefense" class="form-control" />
+                <input asp-for="SpecialDefense" class="form-control"/>
                 <span asp-validation-for="SpecialDefense" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Speed" class="control-label"></label>
-                <input asp-for="Speed" class="form-control" />
+                <input asp-for="Speed" class="form-control"/>
                 <span asp-validation-for="Speed" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Create" class="btn btn-primary"/>
             </div>
         </form>
     </div>
