@@ -4,9 +4,10 @@
     ViewData["Title"] = "Edit";
 }
 
-<h1>Currently Editing @Model.Fakemon.Name</h1>
+<!-- Display Name of Current Fakemon -->
+<h1>Currently Editing @Html.DisplayFor(model => model.Fakemon.Name)</h1>
 
-<h4>@Model.Fakemon.Name Statistics</h4>
+<h4>@Html.DisplayFor(model => model.Fakemon.Name) Statistics</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">

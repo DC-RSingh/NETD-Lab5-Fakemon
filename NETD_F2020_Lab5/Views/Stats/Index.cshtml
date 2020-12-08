@@ -33,9 +33,12 @@
         <th>
             @Html.DisplayNameFor(model => model.Speed)
         </th>
-        <th></th>
+        <th>
+            Options
+        </th>
     </tr>
     </thead>
+    <!-- Generate Stats Table -->
     <tbody>
 @foreach (var item in Model) {
     <tr>
@@ -60,6 +63,7 @@
         <td>
             @Html.DisplayFor(modelItem => item.Speed)
         </td>
+        <!-- Field With Options -->
         <td>
             <a asp-action="Edit" asp-route-id="@item.StatsId">Edit</a> |
             <a asp-action="Details" asp-route-id="@item.StatsId">Details</a> |
