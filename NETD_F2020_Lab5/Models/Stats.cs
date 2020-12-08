@@ -1,4 +1,8 @@
-﻿using System;
+﻿// Name     : Raje Singh
+// Course   : NETD3202
+// School   : Durham College
+// Date     : December 7, 2020
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -10,6 +14,7 @@ namespace NETD_F2020_Lab5.Models
 {
     public class Stats
     {
+        // The Primary Key and Foreign Key for the Stats Table
         [ForeignKey("Fakemon")]
         public Guid StatsId { get; set; }
 

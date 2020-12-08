@@ -1,4 +1,8 @@
-﻿using System;
+﻿// Name     : Raje Singh
+// Course   : NETD3202
+// School   : Durham College
+// Date     : December 7, 2020
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
