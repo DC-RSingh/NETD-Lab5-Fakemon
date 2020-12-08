@@ -65,6 +65,13 @@ namespace NETD_F2020_Lab5.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+
+            // Set flag if user tries to enter stats that already exist
+            if (StatsExists(stats.StatsId))
+            {
+                ViewData["Flag"] = true;
+            }
+
             ViewData["StatsId"] = new SelectList(_context.Fakemons, "DexNumber", "Name", stats.StatsId);
 
             return View(stats);
