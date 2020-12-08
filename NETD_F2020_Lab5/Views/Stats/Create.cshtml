@@ -4,7 +4,7 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
+<h1>Create Stats for your Fakemon!</h1>
 
 <h4>Stats</h4>
 <hr />
@@ -14,7 +14,10 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="StatsId" class="control-label"></label>
-                <select asp-for="StatsId" class ="form-control" asp-items="ViewBag.StatsId"></select>
+                <select asp-for="StatsId" class="form-control" asp-items="ViewBag.StatsId">
+                    <!-- Disabled Option to Inform User what to Do-->
+                    <option selected disabled>Select Fakemon...</option>
+                </select>
             </div>
             <div class="form-group">
                 <label asp-for="HitPoints" class="control-label"></label>

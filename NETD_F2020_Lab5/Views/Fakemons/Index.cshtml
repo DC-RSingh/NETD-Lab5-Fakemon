@@ -4,31 +4,34 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Create a Fake Monster!</h1>
+<h1>Your Fake Monsters</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Create New Monster</a>
 </p>
 <table class="table table-dark table-striped table-bordered">
     <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TypeOne)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TypeTwo)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Nature)
-            </th>
-            <th></th>
-        </tr>
+    <tr>
+        <!-- Generate table Headings -->
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TypeOne)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TypeTwo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nature)
+        </th>
+        <th></th>
+    </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
+    <!-- Generate Table Data -->
+    @foreach (var item in Model)
+    {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.Name)
@@ -48,6 +51,6 @@
                 <a asp-action="Delete" asp-route-id="@item.DexNumber">Delete</a>
             </td>
         </tr>
-}
+    }
     </tbody>
 </table>

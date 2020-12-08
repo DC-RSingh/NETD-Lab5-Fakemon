@@ -4,68 +4,72 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Update the Stats of your Fakemon!</h1>
+<h1>Create the Stats fo your Fakemon!</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Create New Stats for a Fakemon</a>
 </p>
 <table class="table table-dark table-striped table-bordered">
     <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.HitPoints)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Attack)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Defense)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.SpecialAttack)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.SpecialDefense)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Speed)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Fakemon)
-            </th>
-            <th></th>
-        </tr>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Fakemon)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HitPoints)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Attack)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Defense)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SpecialAttack)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SpecialDefense)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Speed)
+        </th>
+        <th>
+            Options
+        </th>
+    </tr>
     </thead>
+    <!-- Generate Stats Table -->
     <tbody>
 @foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.HitPoints)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Attack)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Defense)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SpecialAttack)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SpecialDefense)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Speed)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Fakemon.Name)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.StatsId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.StatsId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.StatsId">Delete</a>
-            </td>
-        </tr>
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fakemon.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HitPoints)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Attack)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Defense)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SpecialAttack)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SpecialDefense)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Speed)
+        </td>
+        <!-- Field With Options -->
+        <td>
+            <a asp-action="Edit" asp-route-id="@item.StatsId">Edit</a> |
+            <a asp-action="Details" asp-route-id="@item.StatsId">Details</a> |
+            <a asp-action="Delete" asp-route-id="@item.StatsId">Delete</a>
+        </td>
+    </tr>
 }
     </tbody>
 </table>
