@@ -7,18 +7,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
+// Import Entity Framework
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using NETD_F2020_Lab5.Models;
 
 namespace NETD_F2020_Lab5.Models
 {
-    public class FakedexContext : DbContext
+    public class FakedexContext : IdentityDbContext<User>
     {
 
         // Constructor for Fakemon Context
         public FakedexContext(DbContextOptions<FakedexContext> options) : base(options)
         {
-
         }
 
         public DbSet<Fakemon> Fakemons { get; set; }
