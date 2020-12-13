@@ -34,6 +34,8 @@ namespace NETD_F2020_Lab5
         {
             // Add Controllers and MVC
             services.AddControllersWithViews();
+            services.AddRazorPages();
+            services.AddMvc();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddMvc(options => options.EnableEndpointRouting = false);
 
