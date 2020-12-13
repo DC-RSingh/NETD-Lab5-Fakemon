@@ -63,6 +63,9 @@ namespace NETD_F2020_Lab5
 
             app.UseAuthorization();
 
+            // Use Authentication
+            app.UseAuthentication();
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
