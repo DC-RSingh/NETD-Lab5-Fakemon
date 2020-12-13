@@ -40,7 +40,7 @@ namespace NETD_F2020_Lab5
             services.AddMvc(options => options.EnableEndpointRouting = false);
 
             // Add the database connection
-            var connection = @"Server=(localdb)\mssqllocaldb;Database=NETD_F2020_Lab5;Trusted_Connection=True;ConnectRetryCount=0";
+            var connection = @"Server=(localdb)\mssqllocaldb;Database=NETD_F2020_Lab5;Trusted_Connection=True;ConnectRetryCount=0;MultipleActiveResultSets=true";
 
             // Add DB Context
             services.AddDbContext<FakedexContext>(options => options.UseSqlServer(connection));
