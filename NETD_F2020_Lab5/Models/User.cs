@@ -10,5 +10,8 @@ namespace NETD_F2020_Lab5.Models
 {
     public class User : IdentityUser
     {
+
+        // The Fake Monsters Created by the User
+        // public ICollection<Fakemon> Fakemons { get; set; }
     }
 }
