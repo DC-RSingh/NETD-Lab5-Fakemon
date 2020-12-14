@@ -47,6 +47,9 @@ namespace NETD_F2020_Lab5
             services.AddIdentity<User, IdentityRole>().AddEntityFrameworkStores<FakedexContext>()
                 .AddDefaultUI()
                 .AddDefaultTokenProviders();
+
+            // Default Authorization Service
+            services.AddAuthorization();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -77,7 +80,8 @@ namespace NETD_F2020_Lab5
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
-                endpoints.MapRazorPages();
+                // Makes Razor pages Require Authorization
+                endpoints.MapRazorPages().RequireAuthorization();
             });
         }
     }
