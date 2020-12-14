@@ -43,8 +43,9 @@ namespace NETD_F2020_Lab5
             // Add DB Context
             services.AddDbContext<FakedexContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
-            // Add Identity Service (Required for 2.1 Compatibility)
+            // Add Identity Service 
             services.AddIdentity<User, IdentityRole>().AddEntityFrameworkStores<FakedexContext>()
+                .AddDefaultUI()
                 .AddDefaultTokenProviders();
         }
 
