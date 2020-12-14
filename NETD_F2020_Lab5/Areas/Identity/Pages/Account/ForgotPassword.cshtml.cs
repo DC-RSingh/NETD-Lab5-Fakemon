@@ -57,12 +57,16 @@ namespace NETD_F2020_Lab5.Areas.Identity.Pages.Account
                     values: new { area = "Identity", code },
                     protocol: Request.Scheme);
 
+                // Since we have no email server, this code does not send an email
                 await _emailSender.SendEmailAsync(
                     Input.Email,
                     "Reset Password",
                     $"Please reset your password by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
 
-                return RedirectToPage("./ForgotPasswordConfirmation");
+                // return RedirectToPage("./ForgotPasswordConfirmation");
+
+                // Redirect the user to the ResetPassword page instead since we do not email anything and the user cannot confirm a code
+                return Redirect(callbackUrl);
             }
 
             return Page();
