@@ -10,7 +10,7 @@ using NETD_F2020_Lab5.Models;
 namespace NETD_F2020_Lab5.Migrations
 {
     [DbContext(typeof(FakedexContext))]
-    [Migration("20201213234714_InitialCreate")]
+    [Migration("20201218235330_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
